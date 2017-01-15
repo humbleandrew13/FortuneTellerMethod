@@ -17,7 +17,7 @@ namespace FortuneTellerMethod
 
             while (trueFalse == true)
             {
-                Console.WriteLine("\nHello there!!! Thank you for using the new and improved Mister Cleatus,/nthe \"slightly less\" inaccurate fortune teller.\n\nTo quit at any time, type \"Quit\"\nTo restart at any time, type \"Restart\"\n\n");
+                Console.WriteLine("\nThank you for using the new and improved Blue Genie,\nthe \"slightly less\" inaccurate fortune teller.\n\nTo quit at any time, type \"Quit\"\nTo restart at any time, type \"Restart\"\n\n");
                 Console.WriteLine("\nTo begin, please enter your first name. Nicknames are okay.\n");  //asking for first name
 
                 string firstName = Console.ReadLine();
@@ -25,7 +25,7 @@ namespace FortuneTellerMethod
 
                 if (firstNameCaps == "QUIT")
                 {
-                    Console.WriteLine("Nobody likes a quitter...");
+                    Console.WriteLine("\nNobody likes a quitter...");
                     break;
                 }
                 else if (firstNameCaps == "RESTART")
@@ -40,7 +40,7 @@ namespace FortuneTellerMethod
 
                 if (lastNameCaps == "QUIT")
                 {
-                    Console.WriteLine("Nobody likes a quitter...");
+                    Console.WriteLine("\nNobody likes a quitter...");
                     break;
                 }
                 else if (lastNameCaps == "RESTART")
@@ -58,7 +58,7 @@ namespace FortuneTellerMethod
 
                 if (ageQuitCaps == "QUIT")
                 {
-                    Console.WriteLine("Nobody likes a quitter...");
+                    Console.WriteLine("\nNobody likes a quitter...");
                     break;
                 }
                 else if (ageQuitCaps == "RESTART")
@@ -78,7 +78,7 @@ namespace FortuneTellerMethod
 
                 if (birthMonthQuitCaps == "QUIT")
                 {
-                    Console.WriteLine("Nobody likes a quitter...");
+                    Console.WriteLine("\nNobody likes a quitter...");
                     break;
                 }
                 else if (birthMonthQuitCaps == "RESTART")
@@ -97,7 +97,7 @@ namespace FortuneTellerMethod
 
                 if (favoriteColorCaps == "QUIT")
                 {
-                    Console.WriteLine("Nobody likes a quitter...");
+                    Console.WriteLine("\nNobody likes a quitter...");
                     break;
                 }
                 else if (favoriteColorCaps == "RESTART")
@@ -120,7 +120,7 @@ namespace FortuneTellerMethod
 
                 if (favoriteColorCaps == "QUIT")
                 {
-                    Console.WriteLine("Nobody likes a quitter...");
+                    Console.WriteLine("\nNobody likes a quitter...");
                     break;
                 }
                 else if (favoriteColorCaps == "RESTART")
@@ -137,7 +137,7 @@ namespace FortuneTellerMethod
 
                 if (numberOfSiblingsQuitCaps == "QUIT")
                 {
-                    Console.WriteLine("Nobody likes a quitter...");
+                    Console.WriteLine("\nNobody likes a quitter...");
                     break;
                 }
                 else if (numberOfSiblingsQuitCaps == "RESTART")
@@ -156,9 +156,11 @@ namespace FortuneTellerMethod
 
                 //All user input is complete.
 
-                Console.WriteLine("\n\n" + fullName + " will retire in " + retireYears + " years with $" + moneyInBank + " in the bank,\na vacation home in " + vacationHome + ", and " + transport + ".");
+                Console.WriteLine("\n\n" + fullName + " will retire in " + retireYears + " years with $" + moneyInBank + " in the bank,\na vacation home " + vacationHome + ", and " + transport + ".");
 
-                trueFalse = false;
+                FortuneQuality();
+
+                trueFalse = false; //stops the loop if the program gets to the end
             }
 
             Console.ReadKey();
@@ -168,7 +170,7 @@ namespace FortuneTellerMethod
         static string GreetUser(string firstName, string lastName)
         {
             string fullName = firstName + " " + lastName;
-            Console.WriteLine("Greetings, " + fullName + ". I will tell you your fortune!");
+            Console.WriteLine("\nGreetings, " + fullName + ". I will tell you your fortune!");
             return fullName;
         }
 
@@ -201,23 +203,23 @@ namespace FortuneTellerMethod
                 switch (numberOfSiblings)
                 {
                     case 0:
-                        vacationHome = "a beach house in Dubai";
+                        vacationHome = "at a beach house in Dubai";
                         break;
 
                     case 1:
-                        vacationHome = "Rio de Janeiro";
+                        vacationHome = "in Rio de Janeiro";
                         break;
 
                     case 2:
-                        vacationHome = "Napa Valley";
+                        vacationHome = "in Napa Valley";
                         break;
 
                     case 3:
-                        vacationHome = "a modest cabin in the woods";
+                        vacationHome = "at a modest cabin in the woods";
                         break;
 
                     default:
-                        vacationHome = "a dumpster in Siberia (you filthy liar)";
+                        vacationHome = "in a dumpster in Siberia (you filthy liar)";
                         break;
                 }
             }
@@ -235,11 +237,11 @@ namespace FortuneTellerMethod
                     break;
 
                 case "BLUE":
-                    transport = "\na yacht on the cerulean sea";
+                    transport = "\na navy blue yacht";
                     break;
 
                 case "GREEN":
-                    transport = "\nan emerald colored private jet";
+                    transport = "\na Jolly Green Giant parade float";
                     break;
 
                 case "ORANGE":
@@ -259,11 +261,11 @@ namespace FortuneTellerMethod
                     break;
 
                 case "INIGO":
-                    transport = "\nmy name is Inigo Montoya.\n\nYou killed my father, prepare to die (nice typo)\a\a\a";
+                    transport = "\nmy name is Inigo Montoya.\n\nYou killed my father./nPrepare to die (nice typo)\a\a\a";
                     break;
 
                 default:
-                    transport = "\na squeaky shopping cart";
+                    transport = "\nwill ride around on a squeaky shopping cart";
                     break;
             }
             return transport;
@@ -296,7 +298,7 @@ namespace FortuneTellerMethod
         //fortune comment method
         static void FortuneQuality()
         {
-            Console.WriteLine("That might be my best fortune yet. Good for you.");
+            Console.WriteLine("\nThat might be my best fortune yet. Good for you.");
         }
     }
 }
